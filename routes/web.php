@@ -24,3 +24,7 @@ Route::group(['prefix' => 'api'], function()
     Route::resource('jobs', 'JobsController');
     Route::resource('companies', 'CompaniesController');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
